@@ -1,0 +1,1 @@
+The repo contains Sample Code to reproduce JPA deleteAllInBatch() issue.
