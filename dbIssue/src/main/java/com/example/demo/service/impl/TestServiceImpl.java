@@ -26,7 +26,16 @@ public class TestServiceImpl implements TestService
 	public void deleteByName(String name)
 	{
 		System.err.println("The number of rows to be deleted = "+testRepository.findByName(name).size());
-		testRepository.deleteInBatch(testRepository.findByName(name));
+		try
+		{
+
+			List<Test> list = testRepository.findByName(name);
+			testRepository.deleteInBatch(list);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error occured");
+		}
 	}
 	
 	

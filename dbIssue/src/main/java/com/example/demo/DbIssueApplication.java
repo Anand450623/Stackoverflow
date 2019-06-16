@@ -13,6 +13,7 @@ import com.example.demo.service.TestService;
 @SpringBootApplication
 public class DbIssueApplication 
 {
+	
 	public static void main(String[] args) 
 	{
 		ApplicationContext context = SpringApplication.run(DbIssueApplication.class, args);
@@ -25,11 +26,8 @@ public class DbIssueApplication
 		{
 			testList.add(new Test(i,(i%2==0)?"field1":"field2"));
 		}
-		service.insert(testList);
-		
-		
+		//service.insert(testList);		
 		service.deleteByName("field2");
-		
 		System.err.println("The processing took = "+(System.currentTimeMillis()-st)+" ms");
 	}
 
