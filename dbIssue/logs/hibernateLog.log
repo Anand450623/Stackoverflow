@@ -1,4 +1,4 @@
-[           main] o.h.h.i.QueryTranslatorFactoryInitiator  : QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@19de304
+[           main] o.h.h.i.QueryTranslatorFactoryInitiator  : QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@1da79eb
 [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
 [           main] o.h.h.i.a.QueryTranslatorImpl            : parse() - HQL: select generatedAlias0 from com.example.demo.entity.Test as generatedAlias0 where generatedAlias0.name=:param0
 [           main] o.h.h.i.a.ErrorTracker                   : throwQueryException() : no errors
@@ -31,7 +31,7 @@
 [           main] o.h.h.i.a.t.FromElement                  : FromClause{level=1} : com.example.demo.entity.Test (generatedAlias0) -> test0_
 [           main] o.h.h.i.a.t.FromReferenceNode            : Resolved : generatedAlias0 -> test0_.id
 [           main] o.h.h.i.a.t.FromReferenceNode            : Resolved : generatedAlias0 -> test0_.id
-[           main] o.h.h.i.a.t.DotNode                      : getDataType() : name -> org.hibernate.type.StringType@fd26b
+[           main] o.h.h.i.a.t.DotNode                      : getDataType() : name -> org.hibernate.type.StringType@3790cf
 [           main] o.h.h.i.a.t.FromReferenceNode            : Resolved : generatedAlias0.name -> test0_.name
 [           main] o.h.h.i.a.HqlSqlBaseWalker               : select : finishing up [level=1, statement=select]
 [           main] o.h.h.i.a.HqlSqlWalker                   : processQuery() :  ( SELECT ( {select clause} test0_.id ) ( FromClause{level=1} test test0_ ) ( where ( = ( test0_.name test0_.id name ) ? ) ) )
@@ -49,7 +49,7 @@
           +-[DOT] DotNode: 'test0_.name' {propertyName=name,dereferenceType=PRIMITIVE,getPropertyPath=name,path=generatedAlias0.name,tableAlias=test0_,className=com.example.demo.entity.Test,classAlias=generatedAlias0}
           |  +-[ALIAS_REF] IdentNode: 'test0_.id' {alias=generatedAlias0, className=com.example.demo.entity.Test, tableAlias=test0_}
           |  \-[IDENT] IdentNode: 'name' {originalText=name}
-          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@fd26b}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@3790cf}
 
 [           main] o.h.h.i.a.ErrorTracker                   : throwQueryException() : no errors
 [           main] o.h.h.i.a.QueryTranslatorImpl            : HQL: select generatedAlias0 from com.example.demo.entity.Test as generatedAlias0 where generatedAlias0.name=:param0

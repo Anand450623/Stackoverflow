@@ -1,4 +1,4 @@
-[           main] c.e.d.DbIssueApplication                 : Starting DbIssueApplication on DESKTOP-MINTDNH with PID 5756 (started by ak450 in C:\Users\ak450\OneDrive\Desktop\Basic Stuff\dbIssue)
+[           main] c.e.d.DbIssueApplication                 : Starting DbIssueApplication on DESKTOP-MINTDNH with PID 4208 (started by ak450 in C:\Users\ak450\OneDrive\Desktop\Basic Stuff\dbIssue)
 [           main] c.e.d.DbIssueApplication                 : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
 [           main] c.e.d.DbIssueApplication                 : No active profile set, falling back to default profiles: default
-[           main] c.e.d.DbIssueApplication                 : Started DbIssueApplication in 5.492 seconds (JVM running for 8.127)
+[           main] c.e.d.DbIssueApplication                 : Started DbIssueApplication in 7.617 seconds (JVM running for 10.304)

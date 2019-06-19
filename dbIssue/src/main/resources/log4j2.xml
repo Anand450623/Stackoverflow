@@ -46,6 +46,19 @@
 			</Policies>
 			<DefaultRolloverStrategy max="10" />
 		</RollingFile>
+		
+		<RollingFile name="logEverything" fileName="logs/everything.log"
+			filePattern="logs/everything-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<Pattern>${LOG_PATTERN}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1MB" />
+				<TimeBasedTriggeringPolicy interval="1" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
 	</Appenders>
 
 	<Loggers>
@@ -63,8 +76,8 @@
 			<AppenderRef ref="HIBERNATELOG" />
 		</AsyncLogger>
 		
-		<Root level="info">
-			<AppenderRef ref="ConsoleAppender" />
+		<Root level="TRACE">
+			<AppenderRef ref="logEverything" />
 		</Root>
 
 	</Loggers>
