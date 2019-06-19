@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+
+	<Properties>
+		<Property name="LOG_PATTERN">
+			[%15.15t] %-40.40c{1.} : %m%n%ex
+		</Property>
+	</Properties>
+
+	<Appenders>
+
+		<Console name="ConsoleAppender" target="SYSTEM_OUT"
+			follow="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</Console>
+
+		<File name="APPLOG" fileName="logs/applog.log"
+			filePattern="logs/applog-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<Pattern>${LOG_PATTERN}</Pattern>
+			</PatternLayout>
+		</File>
+
+
+		<!-- Rolling File Appender -->
+		<RollingFile name="JDBCLOG" fileName="logs/jdbcLog.log"
+			filePattern="logs/jdbcLog-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<Pattern>${LOG_PATTERN}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1MB" />
+				<TimeBasedTriggeringPolicy interval="1" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+
+		<RollingFile name="HIBERNATELOG" fileName="logs/hibernateLog.log"
+			filePattern="logs/hibernateLog-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<Pattern>${LOG_PATTERN}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1MB" />
+				<TimeBasedTriggeringPolicy interval="1" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="logEverything" fileName="logs/everything.log"
+			filePattern="logs/everything-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<Pattern>${LOG_PATTERN}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1MB" />
+				<TimeBasedTriggeringPolicy interval="1" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+	</Appenders>
+
+	<Loggers>
+
+		<Logger name="com.example.demo" level="debug"
+			additivity="false">
+			<AppenderRef ref="APPLOG" />
+		</Logger>
+
+		<AsyncLogger name="org.springframework.jdbc" level="debug" additivity="false">
+			<AppenderRef ref="JDBCLOG" />
+		</AsyncLogger>
+
+		<AsyncLogger name="org.hibernate.hql.internal" level="debug" additivity="false">
+			<AppenderRef ref="HIBERNATELOG" />
+		</AsyncLogger>
+		
+		<Root level="TRACE">
+			<AppenderRef ref="logEverything" />
+		</Root>
+
+	</Loggers>
+
+</Configuration>
