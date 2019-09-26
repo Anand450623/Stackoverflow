@@ -1,1 +1,1 @@
-The repo contains Sample Code to reproduce JPA deleteInBatch() issue.
+The repo contains Sample Code to reproduce issues for posted question.
