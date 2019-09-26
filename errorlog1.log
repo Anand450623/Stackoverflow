@@ -1,0 +1,58 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m      [2m (v2.1.8.RELEASE)[0;39m
+
+[2m2019-09-27 00:05:13.129[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.example.demo.DemoApplication        [0;39m [2m:[0;39m Starting DemoApplication on DESKTOP-46CUQF9 with PID 12164 (C:\Users\abhishek\Desktop\workspace\demo\target\classes started by abhishek in C:\Users\abhishek\Desktop\workspace\demo)
+[2m2019-09-27 00:05:13.132[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.example.demo.DemoApplication        [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2019-09-27 00:05:14.097[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data repositories in DEFAULT mode.
+[2m2019-09-27 00:05:14.145[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+[2m2019-09-27 00:05:15.065[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2019-09-27 00:05:15.066[0;39m [33m WARN[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.util.DriverDataSource [0;39m [2m:[0;39m Registered driver with driverClassName=org.hsqldb.jdbcDriver was not found, trying direct instantiation.
+[2m2019-09-27 00:05:15.675[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.pool.PoolBase         [0;39m [2m:[0;39m HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+[2m2019-09-27 00:05:15.798[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2019-09-27 00:05:15.891[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2019-09-27 00:05:15.986[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.11.Final}
+[2m2019-09-27 00:05:15.987[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2019-09-27 00:05:16.224[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2m2019-09-27 00:05:16.450[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2m2019-09-27 00:05:16.785[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2019-09-27 00:05:17.138[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.example.demo.DemoApplication        [0;39m [2m:[0;39m Started DemoApplication in 4.956 seconds (JVM running for 12.48)
+[2m2019-09-27 00:05:17.142[0;39m [32mDEBUG[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.jdbc.core.JdbcTemplate              [0;39m [2m:[0;39m Executing SQL query [select count(*) from //{h-schema//}test]
+Exception in thread "main" org.springframework.dao.TransientDataAccessResourceException: StatementCallback; SQL [select count(*) from //{h-schema//}test]; Unknown JDBC escape sequence: {: {h-schema//}test; nested exception is java.sql.SQLException: Unknown JDBC escape sequence: {: {h-schema//}test
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:110)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1442)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:387)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:451)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:461)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForList(JdbcTemplate.java:489)
+	at com.example.demo.service.impl.TestImpl.getCount(TestImpl.java:19)
+	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+Caused by: java.sql.SQLException: Unknown JDBC escape sequence: {: {h-schema//}test
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.onStartEscapeSequence(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.nativeSQL(Unknown Source)
+	at org.hsqldb.jdbc.JDBCStatement.fetchResult(Unknown Source)
+	at org.hsqldb.jdbc.JDBCStatement.executeQuery(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:438)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:375)
+	... 5 more
+Caused by: org.hsqldb.HsqlException: Unknown JDBC escape sequence: {: {h-schema//}test
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	... 13 more
+[2m2019-09-27 00:05:17.593[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[      Thread-15][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2019-09-27 00:05:17.607[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[      Thread-15][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2019-09-27 00:05:17.819[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[      Thread-15][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
